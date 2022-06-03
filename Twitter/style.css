@@ -23,7 +23,6 @@ main {
 }
 
 #crazy-image-div {
-    /*border: 1px solid red;*/
     flex: 1 1 55%;
 }
 
@@ -35,30 +34,27 @@ main {
 
 #login-div {
     flex: 1 1 45%;
-    /*border: 1px solid green;*/
-    color: #e7e9ea; /* blue */
+    padding-left: 2rem;
+    color: #e7e9ea;
 }
 
 #mini-logo {
-    margin: 5rem 0 0 1rem;
+    margin: 6rem 0 0 -1rem;
     max-width: 80px;
     max-height: 80px;
 }
 
 h1 {
     font-size: 4rem;
-    margin-left: 2rem;
 }
 
 h2 {
     font-size: 2rem;
-    margin-left: 2rem;
 }
 
 .buttons {
-    margin: 1.2rem 2rem;
     width: 298px;
-    height: 44px;
+    height: 42px;
     font-weight: bold;
     border-radius: 30px;
     display: block;
@@ -74,21 +70,76 @@ h2 {
 }
 
 #signup-apple-button {
+    margin-top: 0.8rem;
     background: #fff url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg') no-repeat 60px 8px;
     background-size: 6%;
 }
 
+#or-word {
+    color: #e7e9ea; /* white */
+    font-family: sans-serif;
+    text-align: center;
+    width: 35%;
+    margin: 10px 0;
+}
+
+#or-word:before, #or-word:after {
+    /* Creating the horizontal lines before and after "or" */
+    background-color: #2f3336; /* grey */
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 40%;
+    position: relative;
+    vertical-align: middle;
+}
+
+#or-word:before {
+    right: 0.5em;
+}
+
+#or-word:after {
+    left: 0.5em;
+}
+
 #signup-button {
-    background: #1a91da;
-    border: none;
-    border-color: #1a91da;
+    background: #1d9bf0;
+    border: none #1d9bf0;
     color: #fff;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+#terms-message {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    color: #71767b;
+    margin-top: 6px; /* Actually reduces the margin from default */
+    width: 38%;
+}
+
+#terms-message a {
+    color: #1d9bf0;
+}
+
+#terms-message a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#already-account-message {
+    margin-top: 4rem;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
 
 #login-button {
     background: #000;
     color: #1a91da;
-    border-color: #1a91da;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: thin;
+    border-color: #536471;
 }
 
 @media (max-width: 1024px) {
@@ -102,7 +153,7 @@ h2 {
     }
 
     #crazy-image {
-        /* Overriding "max-width: 100%"; comrpomised here, they've used a different image, I used same one, so it contracts awkwardly but still looks okay */
+        /* Overriding "max-width: 100%"; compromised here, they've used a different image, I used same one, so it contracts awkwardly but still looks okay */
         width: 100%;
     }
 
