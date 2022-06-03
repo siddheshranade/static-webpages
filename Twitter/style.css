@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Archivo Black', 'Roboto Condensed', 'Raleway', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+
+    /*Read more main-footer solutions at: "https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page"; I went with flex*/
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Main --- */
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1; /* As part of the main-footer flexbox */
+}
+
+#crazy-image-div {
+    flex: 1 1 55%;
+}
+
+#crazy-image {
+    /* Didn't use "max-height" cause I wanted the image to resize (when contracted horizontally) exactly as it does in original website */
+    max-width: 100%;
+    height: 100%;
+}
+
+#login-div {
+    flex: 1 1 45%;
+    color: #d9d9d9; /* blue */
+}
+
+#mini-logo {
+    margin: 5rem 0 0 1rem;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-left: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.buttons {
+    margin: 1.2rem 2rem;
+    width: 380px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: block;
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+#signup-button {
+    background: #1a91da;
+    border: none;
+    border-color: #1a91da;
+    color: #fff;
+}
+
+#login-button {
+    background: #000;
+    color: #1a91da;
+    border-color: #1a91da;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    #crazy-image-div {
+        /* The image div needs to be below the signup one for narrower layouts */
+        order: 2;
+    }
+
+    #crazy-image {
+        /* Overriding "max-width: 100%"; comrpomised here, they've used a different image, I used same one, so it contracts awkwardly but still looks okay */
+        width: 100%;
+    }
+
+    #login-div {
+        margin: 0 auto;
+    }
+
+    .buttons {
+        display: inline;
+        width: 250px;
+        height: 45px;
+    }
+
+    #login-button {
+        margin-left: -10px;
+    }
+}
+
+@media (max-width: 610px) {
+    .buttons {
+        /* Making button widths into a %, otherwise they overflow badly */
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    #login-div {
+        margin: 0 2%;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .buttons {
+        width: 90%;
+    }
+
+    #login-button {
+        /* Overriding the "-10px" margin above */
+        margin-left: 30px;
+    }
+}
+
+/* --- Footer --- */
+
+footer {
+    width: 99%; /* 100% creates a horizontal scrollbar, don't know why */
+    height: 50px;
+    font-family: sans-serif;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer li {
+    font-size: 0.8rem;
+    list-style-type: none;
+    display: inline;
+    color: #62696f;
+    padding: 0 0.5rem;
+}
+
+footer li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
