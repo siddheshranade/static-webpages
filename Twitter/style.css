@@ -161,21 +161,8 @@ h2 {
         margin: 0 auto;
     }
 
-    .buttons {
-        display: inline;
-        width: 250px;
-        height: 45px;
-    }
-
     #login-button {
         margin-left: -10px;
-    }
-}
-
-@media (max-width: 610px) {
-    .buttons {
-        /* Making button widths into a %, otherwise they overflow badly */
-        width: 40%;
     }
 }
 
@@ -205,7 +192,6 @@ h2 {
 /* --- Footer --- */
 
 footer {
-    width: 99%; /* 100% creates a horizontal scrollbar, don't know why */
     height: 50px;
     font-family: sans-serif;
 }
