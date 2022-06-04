@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('//db.onlinewebfonts.com/c/dee482e83301b5964815f140bf974e9e?family=Rational+TW');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Archivo Black', 'Roboto Condensed', 'Raleway', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Main --- */
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1; /* As part of the main-footer flexbox */
+}
+
+#crazy-image-div {
+    flex: 1 1 55%;
+}
+
+#crazy-image {
+    /* Didn't use "max-height" cause I wanted the image to resize (when contracted horizontally) exactly as it does in original website */
+    max-width: 100%;
+    height: 100%;
+}
+
+#login-div {
+    flex: 1 1 45%;
+    padding-left: 2rem;
+    color: #e7e9ea;
+}
+
+#mini-logo {
+    margin: 6rem 0 0 -1rem;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.buttons {
+    width: 298px;
+    height: 42px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: block;
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+#signup-google-button {
+    background: #fff url('http://assets.stickpng.com/thumbs/5847f9cbcef1014c0b5e48c8.png') no-repeat 60px 12px;
+    background-size: 6%;
+}
+
+#signup-apple-button {
+    margin-top: 0.8rem;
+    background: #fff url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg') no-repeat 60px 8px;
+    background-size: 6%;
+}
+
+#or-word {
+    color: #e7e9ea; /* white */
+    font-family: sans-serif;
+    text-align: center;
+    width: 35%;
+    margin: 10px 0;
+}
+
+#or-word:before, #or-word:after {
+    /* Creating the horizontal lines before and after "or" */
+    background-color: #2f3336; /* grey */
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 40%;
+    position: relative;
+    vertical-align: middle;
+}
+
+#or-word:before {
+    right: 0.5em;
+}
+
+#or-word:after {
+    left: 0.5em;
+}
+
+#signup-button {
+    background: #1d9bf0;
+    border: none #1d9bf0;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+#terms-message {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    color: #71767b;
+    margin-top: 6px; /* Actually reduces the margin from default */
+    width: 38%;
+}
+
+#terms-message a {
+    color: #1d9bf0;
+}
+
+#terms-message a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#already-account-message {
+    margin-top: 4rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#login-button {
+    background: #000;
+    color: #1a91da;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: thin;
+    border-color: #536471;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    #crazy-image-div {
+        /* The image div needs to be below the signup one for narrower layouts */
+        order: 2;
+    }
+
+    #crazy-image {
+        /* Overriding "max-width: 100%"; compromised here, they've used a different image, I used same one, so it contracts awkwardly but still looks okay */
+        width: 100%;
+    }
+
+    #login-div {
+        margin: 0 auto;
+    }
+
+    #login-button {
+        margin-left: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #login-div {
+        margin: 0 2%;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .buttons {
+        width: 90%;
+    }
+
+    #login-button {
+        /* Overriding the "-10px" margin above */
+        margin-left: 30px;
+    }
+}
+
+/* --- Footer --- */
+
+footer {
+    height: 50px;
+    font-family: sans-serif;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer li {
+    font-size: 0.8rem;
+    list-style-type: none;
+    display: inline;
+    color: #62696f;
+    padding: 0 0.5rem;
+}
+
+footer li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
