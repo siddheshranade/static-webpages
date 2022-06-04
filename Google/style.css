@@ -1,6 +1,6 @@
-/* Didn't do:
-* The apps grid at the top doesn't get a circular shadow on mouse hover
-* Font and font-weights are not 100% accurate to ones on google.com
+/* Stuff to add/fix:
+* 3x3 apps grid in nav bar doesn't get a circular shadow on mouse hover
+* No media queries added for lesser widths - footer elements get mushed
 */
 
 html, body {
@@ -108,7 +108,7 @@ main > div {
 #search-bar {
     border: none;
     height: 38px;
-    width: 500px;
+    width: 460px;
     font-size: 100%; /* 100% enlarges from default size for some reason */
 }
 
@@ -117,7 +117,6 @@ main > div {
 }
 
 .buttons {
-    border: none;
     background: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
@@ -160,51 +159,45 @@ main > div {
 footer {
     font-size: 95%;
     width: 100%;
+    height: 48px;
     background: #f2f2f2;
-}
 
-footer hr {
-    border: none;
-    height: 1px;
-    /* Got below colour and all colours using FireFox's eyedropper tool */
-    background: #dddee2;
-}
-
-footer div {
-    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .footer-text {
     color: #767a7f;
-    margin: 0.8rem 0.5rem;
+    vertical-align: center;
 }
 
-#footer-country {
+footer span {
+    flex-grow: 1;
+
     display: flex;
-    justify-content: flex-start; /* default but mentioning for clarity */
+    justify-content: center;
+    align-items: center;
 }
 
-#footer-main {
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#footer-left-list {
+    justify-content: left;
+    margin-left: 1rem;
 }
 
-@media (max-width: 641px) {
-    #footer-main {
-        flex-direction: column;
-    }
+#footer-left-list a {
+    padding: 0 1rem;
+}
 
-    #footer-main-first-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+#footer-mid-carbon-text {
+    margin-left: -150px;
+}
 
-    #footer-main-second-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+#footer-right-list {
+    justify-content: right;
+    margin-right: 1rem;
+}
+
+#footer-right-list a {
+    padding: 0 1rem;
 }

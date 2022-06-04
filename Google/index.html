@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Google</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,17 +20,17 @@
                      src='https://i.postimg.cc/8cC0d66J/grid1.png'/>
                 <button class='heading-elements' id='heading-sign-in-button'>Sign in</button>
             </div>
-
         </nav>
     </header>
 
     <main>
         <div id='logo-div'>
-            <image src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='Google Logo' id="google-logo">
+            <img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
+                 alt='Google Logo' id="google-logo">
         </div>
         <div id='search-div'>
             <span class="material-icons search-icon">search</span>
-            <input type='text' id='search-bar' name='search'>
+            <label for='search-bar'></label><input type='text' id='search-bar' name='search'>
         </div>
         <div id='buttons-div'>
             <button class='buttons'>Google Search</button>
@@ -51,23 +52,20 @@
         </div>
     </main>
 
-    <footer>
-        <div id='footer-country'>
-            <p class='footer-text'>Carbon neutral since 2007</p>
-        </div>
-<!--        <hr>-->
-        <div id='footer-main'>
-            <span id='footer-main-first-list'>
-                <a href='#' class='footer-text'>Advertising</a>
-                <a href='#' class='footer-text'>Business</a>
-                <a href='#' class='footer-text'>How Search works</a>
-            </span>
-            <span id='footer-main-second-list'>
-                <a href='#' class='footer-text'>Privacy</a>
-                <a href='#' class='footer-text'>Terms</a>
-                <a href='#' class='footer-text'>Settings</a>
-            </span>
-        </div>
+    <footer id='footer-main'>
+        <span id='footer-left-list'>
+            <a href='#' class='footer-text'>Advertising</a>
+            <a href='#' class='footer-text'>Business</a>
+            <a href='#' class='footer-text'>How Search works</a>
+        </span>
+        <span id='footer-mid-carbon-text'>
+            <a href='#' class='footer-text' id='carbon-neutral-text'>Carbon neutral since 2007</a>
+        </span>
+        <span id='footer-right-list'>
+            <a href='#' class='footer-text'>Privacy</a>
+            <a href='#' class='footer-text'>Terms</a>
+            <a href='#' class='footer-text'>Settings</a>
+        </span>
     </footer>
     </body>
 </html>
