@@ -1,0 +1,243 @@
+@import url('https://v1.fontapi.ir/css/SFProDisplay:300');
+
+/* Stuff to add/improve:
+* Fonts are never quite right
+* Main area is a bit flat compared to original - whole page looks compressed
+* No AdChoices icon in the footer
+* Footer options options overflow into new line when screen width reduced, doesn't happen on original
+*/
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'SF Pro Display', sans-serif;
+    color: #000;
+    box-sizing: border-box;
+    background: #f0f2f5; /* white */
+    height: 100vh; /* This is needed for predictable footer alignment */
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Main --- */
+
+main {
+    flex-grow: 1;
+    /* All dimensions here and below taken on inspecting facebook.com */
+    width: 980px;
+    height: 496px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+#main-left-side-div {
+    border: 1px solid green; /*TODO*/
+    display: flex;
+    flex-direction: column;
+}
+
+#fb-logo {
+    width: 300px;
+    height: 106px;
+    /*margin-right: 180px;*/
+    /*margin-bottom: 120px;*/
+}
+
+#fb-mission {
+    border: 1px solid red; /*TODO*/
+    margin-left: 30px;
+    margin-top: -5px;
+    /*margin-bottom: 100px;*/
+    /*font-family: sans-serif;*/
+    font-weight: normal;
+}
+
+#sign-in-box-div {
+    width: 396px;
+    height: 340px;
+    border: white;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 1px rgba(32, 33, 36, 0.28);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-box-all-elments {
+    width: 85%;
+    margin-top: 15px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.sign-in-box-all-elments::placeholder {
+    color: gray;
+}
+
+.login-input-elements {
+    border: 1px solid #e0e1e4; /* light gray */
+    border-radius: 5px;
+    font-size: 100%;
+    padding: 13px 15px;
+}
+
+.login-input-elements:focus {
+    outline-style: solid;
+    outline-color: #3386f2; /* blue */
+}
+
+#log-in-button {
+    width: 93%; /* Buttons need width defined separately */
+    padding: 10px 0;
+    color: #fff;
+    background: #1877f2; /* blue */
+    border: 1px solid #1877f2;
+    border-radius: 7px;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+#log-in-button:hover {
+    cursor: pointer;
+    background: #166FE5; /* darker blue */
+}
+
+#forgot-pwd {
+    text-align: center;
+    color: #1d7af2; /* blue */
+    font-family: 'Helvetica';
+    font-size: 90%;
+}
+
+#sign-in-box-div hr {
+    height: 1px;
+    border: none;
+    background: #f1f2f3; /* gray */
+    width: 90%;
+}
+
+#create-account-button {
+    width: 50%;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 110%;
+    font-weight: bold;
+    background: #42b72a; /* green */
+    border: 1px solid #42b72a;
+    border-radius: 7px;
+}
+
+#create-account-button:hover {
+    cursor: pointer;
+    background: #36A420; /* darker green */
+}
+
+#create-page-text-div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#create-page-link {
+    color: #000;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    main {
+        max-width: 100%; /* So that horizontal scrollbar doesn't appear on page shrinking */
+        padding: 50px 0 150px 0;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-left-side-div {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    #fb-mission {
+        margin-left: 0px; /* Helps center align the text */
+    }
+}
+
+/* --- Footer --- */
+
+footer {
+    background: #fff;
+    font-family: 'Helvetica';
+    padding: 10px 0 5px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-div {
+    width: 80%;
+}
+
+.footer-language, .footer-option-links {
+    color: #385898; /* dark blue */
+    font-size: 12px;
+    margin: 0 7px;
+}
+
+#footer-selected-language {
+    color: #737373; /* gray */
+}
+
+#footer-selected-language:hover {
+    text-decoration: none;
+    cursor: text;
+}
+
+#footer-add-lang-button {
+    background: #f5f6f7;
+    border: 1px solid #d2d5da;
+    color: #676e7d;
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 0px;
+}
+
+#footer-add-lang-button:hover {
+    cursor: pointer;
+}
+
+footer hr {
+    height: 2px;
+    border: none;
+    background: #f2f3f4; /* gray */
+    /* <hr> doesn't appear inside a column flex display unless width is explicitly set: */
+    width: 80%;
+    margin-left: 0px;
+}
+
+#footer-all-options {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-copyright {
+    color: #737373;
+    font-size: 0.7rem;
+}
+
+#footer-copyright p {
+    margin-left: 6px;
+}
