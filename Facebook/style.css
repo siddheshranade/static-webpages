@@ -38,29 +38,39 @@ main {
     margin: auto;
 
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
 #main-left-side-div {
-    border: 1px solid green; /*TODO*/
+    /*border: 1px solid green; !*TODO*!*/
     display: flex;
     flex-direction: column;
+    height: 350px;
+    justify-content: start;
 }
 
 #fb-logo {
+    /*border: 1px solid purple; !*todo*!*/
     width: 300px;
     height: 106px;
+
+    /*pad*/
     /*margin-right: 180px;*/
     /*margin-bottom: 120px;*/
 }
 
 #fb-mission {
-    border: 1px solid red; /*TODO*/
+    /*border: 1px solid red; !*TODO*!*/
+    /*padding-top: -150px;*/
+    /*margin-left: 30px;*/
     margin-left: 30px;
-    margin-top: -5px;
+    margin-top: -1px;
+    margin-right: 120px;
     /*margin-bottom: 100px;*/
-    /*font-family: sans-serif;*/
+    font-family: sans-serif;
     font-weight: normal;
+    font-size: 170%;
 }
 
 #sign-in-box-div {
@@ -117,7 +127,7 @@ main {
 #forgot-pwd {
     text-align: center;
     color: #1d7af2; /* blue */
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', serif;
     font-size: 90%;
 }
 
@@ -147,6 +157,10 @@ main {
 #create-page-text-div {
     text-align: center;
     margin-top: 20px;
+}
+
+#create-page-text {
+    font-size: 90%;
 }
 
 #create-page-link {
