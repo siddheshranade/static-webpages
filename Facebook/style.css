@@ -190,8 +190,9 @@ main {
 /* --- Footer --- */
 
 footer {
+
     background: #fff;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', serif;
     padding: 10px 0 5px 0;
 
     display: flex;
@@ -200,11 +201,11 @@ footer {
 }
 
 .footer-div {
-    width: 80%;
+    width: 65%;
 }
 
 .footer-language, .footer-option-links {
-    color: #385898; /* dark blue */
+    color: #737373; /* dark blue */
     font-size: 12px;
     margin: 0 7px;
 }
@@ -226,7 +227,7 @@ footer {
     font-weight: 900;
     padding-left: 6px;
     padding-right: 6px;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 #footer-add-lang-button:hover {
@@ -238,18 +239,22 @@ footer hr {
     border: none;
     background: #f2f3f4; /* gray */
     /* <hr> doesn't appear inside a column flex display unless width is explicitly set: */
-    width: 80%;
-    margin-left: 0px;
+    width: 95%;
+    margin-left: 0;
 }
 
 #footer-all-options {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*margin-right: 200px;*/
+    /*width: 1200px;*/
+
 }
 
 #footer-copyright {
     color: #737373;
     font-size: 0.7rem;
+    margin-top: 10px;
 }
 
 #footer-copyright p {
