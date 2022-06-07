@@ -79,7 +79,7 @@ h2 {
     color: #e7e9ea; /* white */
     font-family: sans-serif;
     text-align: center;
-    width: 35%;
+    width: 44%;
     margin: 10px 0;
 }
 
@@ -89,7 +89,7 @@ h2 {
     content: "";
     display: inline-block;
     height: 1px;
-    width: 40%;
+    width: 45%;
     position: relative;
     vertical-align: middle;
 }

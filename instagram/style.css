@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+/* To fix:
+* Downward picklist arrow next to "English" in footer missing
+* Horizontal lines before and after "OR" in login box missing
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 100vh;
+    background: #fafafa;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Main --- */
+
+main {
+    flex-grow: 1;
+}
+
+#grid-parent-div {
+    width: 820px;
+    height: 620px;
+    margin: 50px auto;
+
+    display: grid;
+    /* Took exact dimensions from instagram.com */
+    grid-template-columns: 425px 350px;
+    grid-template-rows: 377px 60px 100px;
+    grid-gap: 10px;
+}
+
+#phone-image {
+    /* Didn't use "grid-row: 1/4" or "grid-column: 1/2" here cause dimensions below are enough for placement */
+    width: 430px;
+    height: 610px;
+    /* This is a bit hacky. The phone image is moved partially outside the grid container (at the top) for the page to look like the original */
+    margin-top: -25px;
+}
+
+#main-login-white-box-div {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insta-logo {
+    margin: 30px 0;
+    width: 175px;
+    height: 52px;
+}
+
+.login-input-fields {
+    width: 72%;
+    height: 20px;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 8px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.login-input-fields:focus {
+    border: none;
+    outline-style: solid;
+    outline-color: #b2b2b2;
+}
+
+.login-input-fields::placeholder {
+    color: #5a5a5a;
+    font-size: 93%;
+}
+
+#log-in-button {
+    width: 77%;
+    height: 32px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    background: #b2dffc;
+    border: none;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+#or-text {
+    margin: 10px 0 18px 0;
+    color: #8f8f8f;
+    font-size: 70%;
+    font-weight: bold;
+}
+
+#fb-logo {
+    width: 5%;
+    margin: 0 7px -3px 0;
+}
+
+#login-with-fb {
+    text-align: center;
+    color: #435a8b;
+    font-family: 'Rubik', sans-serif;
+    font-size: 90%;
+    font-weight: 450;
+    margin: 6px 0;
+}
+
+#forgot-pwd {
+    color: #435a8b;
+    font-size: 75%;
+    margin: 12px;
+}
+
+#sign-up-smaller-box-div {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sign-up-text {
+    font-size: 87%;
+}
+
+#sign-up-link {
+    color: #2ca7f6;
+}
+
+#get-the-app-box-div {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+    font-size: 87%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app-buttons-container-div {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.app-store-buttons {
+    width: 40%;
+    margin: 0 3px;
+}
+
+.app-store-buttons:hover {
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+
+footer {
+    color: #b5b5b5;
+    font-size: 75%;
+    margin-top: -100px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-first-row-div {
+    width: 58%;
+    text-align: center; /* For lesser screen widths */
+    padding: 15px;
+}
+
+#footer-third-row-div {
+    padding: 5px 15px 15px 15px;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer-option {
+    font-family: 'Roboto', sans-serif;
+    color: #737373;
+    padding: 0 7px;
+}
+
+#copyright {
+    padding-left: 15px;
+}
+
+#copyright:hover {
+    cursor: text;
+}
+
+/* --- Lower Width --- */
+
+@media (max-width: 900px) {
+    #phone-image {
+        /* For narrower screen widths we need to get rid of the phone image (only cause mimicking original website),
+        which is also why we change the display from grid to flex below */
+        display: none;
+    }
+
+    #grid-parent-div {
+        width: 350px;
+        margin: 20px auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-login-white-box-div {
+        /* Div shrinks disproportionately, need to reset width and height explicitly */
+        width: 350px;
+    }
+
+    #sign-up-smaller-box-div {
+        /* Div shrinks disproportionately, need to reset width and height explicitly */
+        width: 350px;
+        height: 60px;
+    }
+
+    footer {
+        margin-top: -50px;
+    }
+}
+
