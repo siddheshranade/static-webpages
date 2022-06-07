@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
-/* Things to improve:
-* No ">" shown after language options - couldn't find right shape or icon
-*/
-
 html, body {
     margin: 0;
     padding: 0;
@@ -20,12 +16,13 @@ a {
 }
 
 main {
+    /* <main> is the entire central box */
     width: 700px;
     height: 530px;
     background: #fff;
     border: 1px solid #e2e3e4;
     border-radius: 3px;
-    margin: 30px auto;
+    margin: 200px auto;
 
     display: flex;
     flex-direction: column;
@@ -56,7 +53,7 @@ header #quora-tagline {
     flex-direction: row;
 }
 
-/* --- Left Side --- */
+/* --- Login - Left Side --- */
 
 #left-signup-div {
     flex-basis: 50%;
@@ -70,7 +67,7 @@ header #quora-tagline {
     width: 87%;
     height: 45px;
     background: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
     font-size: 90%;
     font-weight: 300;
     text-align: left;
@@ -133,7 +130,7 @@ header #quora-tagline {
     border-left: 1px solid #e2e3e4;
 }
 
-/* --- Right Side --- */
+/* --- Login - Right Side --- */
 
 #right-login-div {
     flex-basis: 45%;
@@ -148,12 +145,12 @@ header #quora-tagline {
 
 #login-text {
     margin-top: 10px;
-    margin-bottom: 0px; /* Somehow 0 isn't default */
+    margin-bottom: 0; /* Somehow 0 isn't default */
 
     color: #303031;
     font-weight: 400;
     font-size: 90%;
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
 }
 
 #line-below-login {
@@ -184,7 +181,7 @@ label {
 
 .input-fields::placeholder {
     font-size: 95%;
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
     font-weight: 300;
     color: gray;
 }
@@ -203,6 +200,7 @@ label {
     margin-top: 30px;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
