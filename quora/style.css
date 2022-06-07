@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    /* Background image settings picked up from https://css-tricks.com/perfect-full-page-background-image/ */
+    background: url(https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    /* <main> is the entire central box */
+    width: 700px;
+    height: 530px;
+    background: #fff;
+    border: 1px solid #e2e3e4;
+    border-radius: 3px;
+    margin: 200px auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header --- */
+
+header {
+    text-align: center;
+    margin: 35px 0 20px 0;
+}
+
+header #quora-logo {
+    width: 175px;
+    height: 48px;
+}
+
+header #quora-tagline {
+    color: #636466;
+    font-size: 93%;
+    margin-top: 5px;
+}
+
+#signup-login-container-div {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* --- Login - Left Side --- */
+
+#left-signup-div {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media-buttons {
+    width: 87%;
+    height: 45px;
+    background: #fff;
+    font-family: 'Roboto', serif;
+    font-size: 90%;
+    font-weight: 300;
+    text-align: left;
+    border: 1px solid #eaebec;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.social-media-buttons:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}
+
+.social-media-logos {
+    width: 8%;
+    margin-bottom: -5px;
+    margin-right: 8px;
+}
+
+#facebook-logo {
+    margin-right: 12px; /* Need to override FB (but not Google) icon's margin for some reason */
+}
+
+#sign-up-text {
+    font-size: 82%;
+    color: #6c6d6f;
+    margin-top: 5px;
+    padding: 10px 100px 5px 100px;
+    border-radius: 15px; /* Border is invisible (white), but need to define radius for mouse hover */
+}
+
+#sign-up-text:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}
+
+#hr-below-sign-up {
+    width: 87%;
+    height: 1px;
+    border: none;
+    background: #e2e3e4;
+}
+
+#terms-text {
+    width: 84%;
+    color: #a0a2a4;
+    font-size: 80%;
+    line-height: 1.5;
+}
+
+.privacy-terms-links {
+    color: #a9aaad;
+    text-decoration: underline;
+}
+
+/* --- Middle Vertical Border --- */
+
+#vertical-border-div {
+    height: 92%;
+    border-left: 1px solid #e2e3e4;
+}
+
+/* --- Login - Right Side --- */
+
+#right-login-div {
+    flex-basis: 45%;
+
+    padding-left: 20px;
+    padding-right: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#login-text {
+    margin-top: 10px;
+    margin-bottom: 0; /* Somehow 0 isn't default */
+
+    color: #303031;
+    font-weight: 400;
+    font-size: 90%;
+    font-family: 'Roboto', serif;
+}
+
+#line-below-login {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: #e2e3e4;
+    margin-bottom: 15px;
+}
+
+label {
+    /* Ie "Email" and "Password" text */
+    font-weight: bold;
+    font-size: 78%;
+    margin: 5px 0;
+}
+
+.input-fields {
+    width: 98%;
+    height: 20px;
+    font-size: 100%;
+    border: 1px solid #eaebec;
+    border-radius: 3px;
+    padding: 10px 0 10px 8px;
+    margin-left: -1px;
+    margin-bottom: 10px;
+}
+
+.input-fields::placeholder {
+    font-size: 95%;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    color: gray;
+}
+
+.input-fields:hover {
+    border: 1px solid #306cfc; /* blue */
+}
+
+.input-fields:focus {
+    outline: none;
+    border: 1px solid #306cfc; /* blue */
+}
+
+#forogt-pwd-and-login-div {
+    width: 100%;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#forgot-pwd-text {
+    color: gray;
+    font-size: 80%;
+}
+
+#forgot-pwd-text:hover {
+    text-decoration: underline;
+}
+
+#login-button {
+    color: #fff;
+    background: #95b3ff;
+    border: 1px solid #95b3ff;
+    border-radius: 18px;
+    padding: 10px 18px;
+}
+
+/* --- Languages Footer --- */
+
+#languages-div {
+    height: 50px;
+    border-top: 1px solid #e5e6e7; /* Gray line above */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-options {
+    color: #3573b4;
+    font-size: 85%;
+    padding: 0 10px;
+}
+
+.language-options:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+
+footer {
+    height: 50px;
+    background: #f1f2f2;
+    border-top: 1px solid #e5e6e7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-options {
+    color: #67686a;
+    font-size: 77%;
+    padding: 0 3px;
+}
+
+.footer-options:hover {
+    text-decoration: underline;
+}
+
+.footer-dots {
+    color: #515253;
+}
