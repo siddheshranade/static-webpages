@@ -2,7 +2,7 @@
 
 These are replicas of some popular websites I made for fun. I've only built the homepage. All are static HTML/CSS pages without functionality. 
 
-You can check out the rendered pages and compare them to the originals using the links below:
+You can check out the rendered pages and compare them to the originals using the links below. Do keep in mind that minor details might have changed since.
 
 #### [Twitter](https://siddheshranade.github.io/static-webpages/twitter) | [Original Twitter homepage](https://twitter.com)
 
